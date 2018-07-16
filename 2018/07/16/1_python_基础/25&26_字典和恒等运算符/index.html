@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="字典和恒等运算符字典字典是可变数据类型，其中存储的是唯一键到值的映射。下面是存储元素和相应原子序数的字典。 1elements = &amp;#123;&amp;quot;hydrogen&amp;quot;: 1, &amp;quot;helium&amp;quot;: 2, &amp;quot;carbon&amp;quot;: 6&amp;#125; 字典的键可以是任何不可变类型，例如整数或元组，而不仅仅是字符串。甚至每个键都不一定要是相同的类型！我们可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/1_python_基础/25&26_字典和恒等运算符/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="字典和恒等运算符字典字典是可变数据类型，其中存储的是唯一键到值的映射。下面是存储元素和相应原子序数的字典。 1elements = &amp;#123;&amp;quot;hydrogen&amp;quot;: 1, &amp;quot;helium&amp;quot;: 2, &amp;quot;carbon&amp;quot;: 6&amp;#125; 字典的键可以是任何不可变类型，例如整数或元组，而不仅仅是字符串。甚至每个键都不一定要是相同的类型！我们可">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-27T10:07:31.720Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="字典和恒等运算符字典字典是可变数据类型，其中存储的是唯一键到值的映射。下面是存储元素和相应原子序数的字典。 1elements = &amp;#123;&amp;quot;hydrogen&amp;quot;: 1, &amp;quot;helium&amp;quot;: 2, &amp;quot;carbon&amp;quot;: 6&amp;#125; 字典的键可以是任何不可变类型，例如整数或元组，而不仅仅是字符串。甚至每个键都不一定要是相同的类型！我们可">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/16/1_python_基础/25&26_字典和恒等运算符/"/>
+
+
+
+
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/1_python_基础/25&26_字典和恒等运算符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T16:32:46+08:00">
+                2018-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="字典和恒等运算符"><a href="#字典和恒等运算符" class="headerlink" title="字典和恒等运算符"></a>字典和恒等运算符</h1><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><p><strong>字典</strong>是可变数据类型，其中存储的是唯一键到值的映射。下面是存储元素和相应原子序数的字典。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">elements = &#123;&quot;hydrogen&quot;: 1, &quot;helium&quot;: 2, &quot;carbon&quot;: 6&#125;</span><br></pre></td></tr></table></figure>
+<p>字典的键可以是任何不可变类型，例如整数或元组，而不仅仅是字符串。甚至每个键都不一定要是相同的类型！我们可以使用方括号并在括号里放入键，查询字典中的值或向字典中插入新值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(elements[&quot;helium&quot;])  # print the value mapped to &quot;helium&quot;</span><br><span class="line">elements[&quot;lithium&quot;] = 3  # insert &quot;lithium&quot; with a value of 3 into the dictionary</span><br></pre></td></tr></table></figure>
+<p>我们可以像检查某个值是否在列表或集合中一样，使用关键字 <code>in</code> 检查值是否在字典中。字典有一个也很有用的相关方法，叫做 <code>get</code>。get 会在字典中查询值，但是和方括号不同，如果没有找到键，get 会返回 None（或者你所选的默认值）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;carbon&quot; in elements)</span><br><span class="line">print(elements.get(&quot;dilithium&quot;))</span><br></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">None</span><br></pre></td></tr></table></figure>
+<p>Carbon 位于该字典中，因此输出 True。Dilithium 不在字典中，因此 <code>get</code> 返回 None，然后系统输出 None。如果你预计查询有时候会失败，<code>get</code> 可能比普通的方括号查询更合适，因为错误可能会使程序崩溃。</p>
+<h3 id="恒等运算符"><a href="#恒等运算符" class="headerlink" title="恒等运算符"></a>恒等运算符</h3><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>运算符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is</code></td>
+<td>检查两边是否恒等</td>
+</tr>
+<tr>
+<td><code>is not</code></td>
+<td>检查两边是否不恒等</td>
+</tr>
+</tbody>
+</table>
+<p>你可以使用运算符 <code>is</code> 检查某个键是否返回了 None。或者使用 <code>is not</code> 检查是否没有返回 None。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n = elements.get(&quot;dilithium&quot;)</span><br><span class="line">print(n is None)</span><br><span class="line">print(n is not None)</span><br></pre></td></tr></table></figure>
+<p>会输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+<h2 id="练习：定义字典"><a href="#练习：定义字典" class="headerlink" title="练习：定义字典"></a>练习：定义字典</h2><p>请定义一个叫做 <code>population</code> 的字典，其中包含以下数据：</p>
+<table>
+<thead>
+<tr>
+<th><strong>键</strong></th>
+<th><strong>值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shanghai</td>
+<td>17.8</td>
+</tr>
+<tr>
+<td>Istanbul</td>
+<td>13.3</td>
+</tr>
+<tr>
+<td>Karachi</td>
+<td>13.0</td>
+</tr>
+<tr>
+<td>Mumbai</td>
+<td>12.5</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Define a Dictionary, population,</span><br><span class="line"># that provides information</span><br><span class="line"># on the world&apos;s largest cities.</span><br><span class="line"># The key is the name of a city</span><br><span class="line"># (a string), and the associated</span><br><span class="line"># value is its population in</span><br><span class="line"># millions of people.</span><br><span class="line"></span><br><span class="line">#   Key     |   Value</span><br><span class="line"># Shanghai  |   17.8</span><br><span class="line"># Istanbul  |   13.3</span><br><span class="line"># Karachi   |   13.0</span><br><span class="line"># Mumbai    |   12.5</span><br><span class="line">population=&#123;&apos;Shanghai&apos;: 17.8,&apos;Istanbul&apos;: 13.3,&apos;Karachi&apos;: 13.0,&apos;Mumbai&apos;: 12.5&#125;</span><br><span class="line">print(population)</span><br></pre></td></tr></table></figure>
+<h3 id="习题-2-5"><a href="#习题-2-5" class="headerlink" title="习题 2/5"></a>习题 2/5</h3><p>以下哪些项可以用作字典的键？（请选中所有适用项。） Hint: 字典的键必须是不可变的，即所属的类型必须不可变。</p>
+<ul>
+<li><code>str</code></li>
+<li><code>list</code></li>
+<li><code>int</code></li>
+<li><code>float</code></li>
+</ul>
+<p>提交</p>
+<h3 id="习题-3-5"><a href="#习题-3-5" class="headerlink" title="习题 3/5"></a>习题 3/5</h3><p>如果我们查找不在字典中的值，会发生什么？请在你自己的计算机上创建一个测试字典，并使用方括号查找尚未定义的值。会发生什么？</p>
+<ul>
+<li>查询返回 <code>None</code></li>
+<li>键被添加到字典中，默认值为 None</li>
+<li>发生 <code>KeyError</code></li>
+<li>Python 在互联网上搜索合适的值</li>
+</ul>
+<p>提交</p>
+<h2 id="返回默认值的-get"><a href="#返回默认值的-get" class="headerlink" title="返回默认值的 get"></a>返回默认值的 <code>get</code></h2><p>字典有一个也很有用的相关方法，叫做 <code>get</code>。get 会在字典中查询值，但是和方括号不同，如果没有找到键，get 会返回 None（或者你所选的默认值）。如果你预计查询有时候会失败，<code>get</code> 可能比普通的方括号查询更合适。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; elements.get(&apos;dilithium&apos;)</span><br><span class="line">None</span><br><span class="line">&gt;&gt;&gt; elements[&apos;dilithium&apos;]</span><br><span class="line">KeyError: &apos;dilithium&apos;</span><br><span class="line">&gt;&gt;&gt; elements.get(&apos;kryptonite&apos;, &apos;There\&apos;s no such element!&apos;)</span><br><span class="line">&quot;There&apos;s no such element!&quot;</span><br></pre></td></tr></table></figure>
+<p>在上个示例中，我们指定了一个默认值（字符串 <code>&#39;There\&#39;s no such element!</code>），当键没找到时，get 会返回该值。</p>
+<h2 id="检查是否相等与恒等：-与-is"><a href="#检查是否相等与恒等：-与-is" class="headerlink" title="检查是否相等与恒等：== 与 is"></a>检查是否相等与恒等：<code>==</code> 与 <code>is</code></h2><h3 id="习题-4-5"><a href="#习题-4-5" class="headerlink" title="习题 4/5"></a>习题 4/5</h3><p>以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = [1, 2, 3]</span><br><span class="line">b = a</span><br><span class="line">c = [1, 2, 3]</span><br><span class="line"></span><br><span class="line">print(a == b)</span><br><span class="line">print(a is b)</span><br><span class="line">print(a == c)</span><br><span class="line">print(a is c)</span><br></pre></td></tr></table></figure>
+<p>该页面的靠下部分有一个编程练习，你可以用该练习进行实验。</p>
+<ul>
+<li>True, True, True, True</li>
+<li>True, False, True, False</li>
+<li>True, True, True, False</li>
+<li>True, True, False, False</li>
+</ul>
+<p>提交</p>
+<h2 id="解决方案：定义字典"><a href="#解决方案：定义字典" class="headerlink" title="解决方案：定义字典"></a>解决方案：定义字典</h2><p>我们可以如下所示地定义字典：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; population = &#123;&apos;Shanghai&apos;: 17.8,</span><br><span class="line">              &apos;Istanbul&apos;: 13.3,</span><br><span class="line">              &apos;Karachi&apos;: 13.0,</span><br><span class="line">              &apos;Mumbai&apos;: 12.5&#125;</span><br></pre></td></tr></table></figure>
+<p>我选择将每个键值对单独放一行，使这个字典定义更容易读懂，但是是否使用换行符以及在何处使用只是一种样式选择。下面这段代码也可行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; population = &#123;&apos;Shanghai&apos;: 17.8, &apos;Istanbul&apos;: 13.3, &apos;Karachi&apos;: 13.0, &apos;Mumbai&apos;: 12.5&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/16/1_python_基础/23&24集合以及练习/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/16/1_python_基础/28&29_复合数据结构以及练习/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字典和恒等运算符"><span class="nav-number">1.</span> <span class="nav-text">字典和恒等运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">1.0.1.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恒等运算符"><span class="nav-number">1.0.2.</span> <span class="nav-text">恒等运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习：定义字典"><span class="nav-number">1.1.</span> <span class="nav-text">练习：定义字典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#习题-2-5"><span class="nav-number">1.1.1.</span> <span class="nav-text">习题 2/5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#习题-3-5"><span class="nav-number">1.1.2.</span> <span class="nav-text">习题 3/5</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回默认值的-get"><span class="nav-number">1.2.</span> <span class="nav-text">返回默认值的 get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查是否相等与恒等：-与-is"><span class="nav-number">1.3.</span> <span class="nav-text">检查是否相等与恒等：== 与 is</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#习题-4-5"><span class="nav-number">1.3.1.</span> <span class="nav-text">习题 4/5</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案：定义字典"><span class="nav-number">1.4.</span> <span class="nav-text">解决方案：定义字典</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

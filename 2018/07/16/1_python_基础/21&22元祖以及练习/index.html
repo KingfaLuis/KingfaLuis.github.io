@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="元组元组是另一个实用容器。它是一种不可变有序元素数据类型。通常用来存储相关的信息。请看看下面这个关于纬度和经度的示例： 123location = (13.4125, 103.866667)print(&amp;quot;Latitude:&amp;quot;, location[0])print(&amp;quot;Longitude:&amp;quot;, location[1]) 元组和列表相似，它们都存储一个有序的对象集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="world cup 2018">
-<meta property="og:url" content="http://yoursite.com/2018/07/16/world-cup-2018/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/1_python_基础/21&22元祖以及练习/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="元组元组是另一个实用容器。它是一种不可变有序元素数据类型。通常用来存储相关的信息。请看看下面这个关于纬度和经度的示例： 123location = (13.4125, 103.866667)print(&amp;quot;Latitude:&amp;quot;, location[0])print(&amp;quot;Longitude:&amp;quot;, location[1]) 元组和列表相似，它们都存储一个有序的对象集">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-15T22:08:40.548Z">
+<meta property="og:updated_time" content="2018-06-27T16:24:30.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="world cup 2018">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="元组元组是另一个实用容器。它是一种不可变有序元素数据类型。通常用来存储相关的信息。请看看下面这个关于纬度和经度的示例： 123location = (13.4125, 103.866667)print(&amp;quot;Latitude:&amp;quot;, location[0])print(&amp;quot;Longitude:&amp;quot;, location[1]) 元组和列表相似，它们都存储一个有序的对象集">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/16/world-cup-2018/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/16/1_python_基础/21&22元祖以及练习/"/>
 
 
 
 
 
-  <title>world cup 2018 | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -229,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/world-cup-2018/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/1_python_基础/21&22元祖以及练习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -246,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">world cup 2018</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -258,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T06:08:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T16:32:46+08:00">
                 2018-07-16
               </time>
             
@@ -296,7 +299,35 @@
       
 
       
-        
+        <h1 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h1><p>元组是另一个实用容器。它是一种不可变有序元素数据类型。通常用来存储相关的信息。请看看下面这个关于纬度和经度的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location = (13.4125, 103.866667)</span><br><span class="line">print(&quot;Latitude:&quot;, location[0])</span><br><span class="line">print(&quot;Longitude:&quot;, location[1])</span><br></pre></td></tr></table></figure>
+<p>元组和列表相似，它们都存储一个有序的对象集合，并且可以通过索引访问这些对象。但是与列表不同的是，元组不可变，你无法向元组中添加项目或从中删除项目，或者直接对元组排序。</p>
+<p>元组还可以用来以紧凑的方式为多个变量赋值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dimensions = 52, 40, 100</span><br><span class="line">length, width, height = dimensions</span><br><span class="line">print(&quot;The dimensions are &#123;&#125; x &#123;&#125; x &#123;&#125;&quot;.format(length, width, height))</span><br></pre></td></tr></table></figure>
+<p>在定义元组时，小括号是可选的，如果小括号并没有对解释代码有影响，程序员经常会忽略小括号。</p>
+<p>在第二行，我们根据元组 dimensions 的内容为三个变量赋了值。这叫做<strong>元组解包</strong>。你可以通过元组解包将元组中的信息赋值给多个变量，而不用逐个访问这些信息，并创建多个赋值语句。</p>
+<p>如果我们不需要直接使用 <code>dimensions</code>，可以将这两行代码简写为一行，一次性为三个变量赋值！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">length, width, height = 52, 40, 100</span><br><span class="line">print(&quot;The dimensions are &#123;&#125; x &#123;&#125; x &#123;&#125;&quot;.format(length, width, height))</span><br></pre></td></tr></table></figure>
+<h1 id="练习：元组"><a href="#练习：元组" class="headerlink" title="练习：元组"></a>练习：元组</h1><h3 id="习题-1-3"><a href="#习题-1-3" class="headerlink" title="习题 1/3"></a>习题 1/3</h3><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h3 id="数量"><a href="#数量" class="headerlink" title="数量"></a>数量</h3><p>元组（顺序）</p>
+<p>有序</p>
+<p>元组（可变性）</p>
+<p>不可变</p>
+<p>列表（顺序）</p>
+<p>有序</p>
+<p>列表（可变性）</p>
+<p>可变</p>
+<p>提交</p>
+<h3 id="习题-2-3"><a href="#习题-2-3" class="headerlink" title="习题 2/3"></a>习题 2/3</h3><p>以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tuple_a = 1, 2</span><br><span class="line">tuple_b = (1, 2)</span><br><span class="line"></span><br><span class="line">print(tuple_a == tuple_b)</span><br><span class="line">print(tuple_a[1])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>True, 1</li>
+<li>False, 1</li>
+<li>True, 2</li>
+<li>False, 2</li>
+<li>Error</li>
+</ul>
+<p>提交</p>
+<h2 id="元组-1"><a href="#元组-1" class="headerlink" title="元组"></a>元组</h2>
       
     </div>
     
@@ -320,8 +351,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/16/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/07/16/1_python_基础/2&3_算术运算符以及练习/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -330,7 +361,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/16/17_Pandas Series apply()/" rel="prev" title="">
+              <a href="/2018/07/16/1_python_基础/23&24集合以及练习/" rel="prev" title="">
                  <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -384,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -427,6 +467,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#元组"><span class="nav-number">1.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习：元组"><span class="nav-number">2.</span> <span class="nav-text">练习：元组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#习题-1-3"><span class="nav-number">2.0.1.</span> <span class="nav-text">习题 1/3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.0.2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数量"><span class="nav-number">2.0.3.</span> <span class="nav-text">数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#习题-2-3"><span class="nav-number">2.0.4.</span> <span class="nav-text">习题 2/3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元组-1"><span class="nav-number">2.1.</span> <span class="nav-text">元组</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

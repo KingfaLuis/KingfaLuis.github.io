@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="复合数据结构我们可以在其他容器中包含容器，以创建复合数据结构。例如，下面的字典将键映射到也是字典的值！ 123456elements = &amp;#123;&amp;quot;hydrogen&amp;quot;: &amp;#123;&amp;quot;number&amp;quot;: 1,                         &amp;quot;weight&amp;quot;: 1.00794,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="world cup 2018">
-<meta property="og:url" content="http://yoursite.com/2018/07/16/world-cup-2018/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/1_python_基础/28&29_复合数据结构以及练习/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="复合数据结构我们可以在其他容器中包含容器，以创建复合数据结构。例如，下面的字典将键映射到也是字典的值！ 123456elements = &amp;#123;&amp;quot;hydrogen&amp;quot;: &amp;#123;&amp;quot;number&amp;quot;: 1,                         &amp;quot;weight&amp;quot;: 1.00794,">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-15T22:08:40.548Z">
+<meta property="og:updated_time" content="2018-06-27T10:09:36.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="world cup 2018">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="复合数据结构我们可以在其他容器中包含容器，以创建复合数据结构。例如，下面的字典将键映射到也是字典的值！ 123456elements = &amp;#123;&amp;quot;hydrogen&amp;quot;: &amp;#123;&amp;quot;number&amp;quot;: 1,                         &amp;quot;weight&amp;quot;: 1.00794,">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/16/world-cup-2018/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/16/1_python_基础/28&29_复合数据结构以及练习/"/>
 
 
 
 
 
-  <title>world cup 2018 | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -229,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/world-cup-2018/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/1_python_基础/28&29_复合数据结构以及练习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -246,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">world cup 2018</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -258,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T06:08:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T16:32:46+08:00">
                 2018-07-16
               </time>
             
@@ -296,7 +299,14 @@
       
 
       
-        
+        <h1 id="复合数据结构"><a href="#复合数据结构" class="headerlink" title="复合数据结构"></a>复合数据结构</h1><p>我们可以在其他容器中包含容器，以创建复合数据结构。例如，下面的字典将键映射到也是字典的值！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">elements = &#123;&quot;hydrogen&quot;: &#123;&quot;number&quot;: 1,</span><br><span class="line">                         &quot;weight&quot;: 1.00794,</span><br><span class="line">                         &quot;symbol&quot;: &quot;H&quot;&#125;,</span><br><span class="line">              &quot;helium&quot;: &#123;&quot;number&quot;: 2,</span><br><span class="line">                         &quot;weight&quot;: 4.002602,</span><br><span class="line">                         &quot;symbol&quot;: &quot;He&quot;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以如下所示地访问这个嵌套字典中的元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">helium = elements[&quot;helium&quot;]  # get the helium dictionary</span><br><span class="line">hydrogen_weight = elements[&quot;hydrogen&quot;][&quot;weight&quot;]  # get hydrogen&apos;s weight</span><br></pre></td></tr></table></figure>
+<h2 id="练习：向嵌套字典中添加值"><a href="#练习：向嵌套字典中添加值" class="headerlink" title="练习：向嵌套字典中添加值"></a>练习：向嵌套字典中添加值</h2><p>请自己尝试处理嵌套字典。向 <code>elements</code> 字典中的每个字典添加另一个条目 ‘is_noble_gas。插入新条目后，你应该能够执行以下查询：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(elements[&apos;hydrogen&apos;][&apos;is_noble_gas&apos;])</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; print(elements[&apos;helium&apos;][&apos;is_noble_gas&apos;])</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">elements = &#123;&apos;hydrogen&apos;: &#123;&apos;number&apos;: 1, &apos;weight&apos;: 1.00794, &apos;symbol&apos;: &apos;H&apos;&#125;,</span><br><span class="line">            &apos;helium&apos;: &#123;&apos;number&apos;: 2, &apos;weight&apos;: 4.002602, &apos;symbol&apos;: &apos;He&apos;&#125;&#125;</span><br><span class="line"></span><br><span class="line"># todo: Add an &apos;is_noble_gas&apos; entry to the hydrogen and helium dictionaries</span><br><span class="line"># hint: helium is a noble gas, hydrogen isn&apos;t</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -320,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/16/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/07/16/1_python_基础/25&26_字典和恒等运算符/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -330,7 +340,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/16/17_Pandas Series apply()/" rel="prev" title="">
+              <a href="/2018/07/16/1_python_基础/2_算术运算符以及练习/" rel="prev" title="">
                  <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -384,8 +394,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -427,6 +446,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复合数据结构"><span class="nav-number">1.</span> <span class="nav-text">复合数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#练习：向嵌套字典中添加值"><span class="nav-number">1.1.</span> <span class="nav-text">练习：向嵌套字典中添加值</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
