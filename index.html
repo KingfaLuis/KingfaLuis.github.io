@@ -229,6 +229,146 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/Python 中的关系数据库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/17/Python 中的关系数据库/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T13:27:54+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Python-中的关系数据库"><a href="#Python-中的关系数据库" class="headerlink" title="Python 中的关系数据库"></a>Python 中的关系数据库</h2><h3 id="数据整理和关系数据库"><a href="#数据整理和关系数据库" class="headerlink" title="数据整理和关系数据库"></a>数据整理和关系数据库</h3><p>在数据整理过程中，我们建议数据库和 SQL 仅用于收集数据或存储数据。也就是说：</p>
+<ul>
+<li><strong>连接到数据库并将数据</strong>导入到 pandas DataFrame(或首选编程语言的类似数据结构)中，然后评估和清理这些数据，或</li>
+<li><strong>连接到数据库并存储</strong>我们刚刚收集(可能来自数据库)、评估和清理的数据</li>
+</ul>
+<p>如果数据量比较大，这些处理工作将特别有用，而且 SQL 和数据库非常适合平面文件。</p>
+<p>可以将上述两种情况进一步分为三个主要任务：</p>
+<ul>
+<li>连接 Python 中的数据库</li>
+<li>将 <strong>pandas DataFrame</strong> 里的数据储存至你所连接的数据库中，以及</li>
+<li>将你所连接的数据库里的数据导入至 <strong>pandas DataFarme</strong> 中。</li>
+</ul>
+<h3 id="本节课"><a href="#本节课" class="headerlink" title="本节课"></a>本节课</h3><p>对于这节课中的示例，我们将按顺序操作：</p>
+<ol>
+<li>连接到数据库。我们将使用 <a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a> 连接到 SQLite 数据库，这是 Python 的数据库工具包。</li>
+<li>将数据存储在数据库中经清理的主数据集中。我们将使用 pandas 的 <code>to_csv</code> DataFrame 方法存储数据。</li>
+<li>然后将该数据库中的全新数据读取到 pandas DataFrame 中。我们将使用 pandas 的 <code>read_csv</code> 函数来进行这些操作。</li>
+</ol>
+<p>这节课不需要进行第三条，但是有时候在工作过程中，会在项目开始时为你提供一个数据库。这就不一定必须得下载文件、抓取网页、点击 API 等。</p>
+<p>我们将在下面的 Jupyter Notebook 中介绍和执行上面三种操作。</p>
+<h3 id="在-SQL-中进行数据整理？"><a href="#在-SQL-中进行数据整理？" class="headerlink" title="在 SQL 中进行数据整理？"></a>在 SQL 中进行数据整理？</h3><p>实际上可以在 <em>SQL</em> 中进行数据整理，但是我们认为 pandas 更适合收集 (pandas 在这方面有很大的优势，而且操作起来简单)、评估和清理数据，所以我们建议你使用 pandas。一般来说，<a href="https://www.reddit.com/r/Python/comments/1tqjt4/why_do_you_use_pandas_instead_of_sql/" target="_blank" rel="noopener">讨论 pandas 与 SQL 的 Reddit thread</a> 还是比较有趣的，还涉及几个与数据整理有关的主题。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/1_python_基础/Python 编程概要/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1708,160 +1848,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/1_python_基础/23&24集合以及练习/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/16/1_python_基础/23&24集合以及练习/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T16:32:46+08:00">
-                2018-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><strong>集合</strong>是一个包含唯一元素的可变无序集合数据类型。集合的一个用途是快速删除列表中的重复项。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers = [1, 2, 6, 3, 1, 1, 6]</span><br><span class="line">unique_nums = set(numbers)</span><br><span class="line">print(unique_nums)</span><br></pre></td></tr></table></figure>
-<p>输出为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;1, 2, 3, 6&#125;</span><br></pre></td></tr></table></figure>
-<p>集合和列表一样支持 <code>in</code> 运算符。和列表相似，你可以使用 <code>add</code> 方法将元素添加到集合中，并使用 <code>pop</code> 方法删除元素。但是，当你从集合中拿出元素时，会随机删除一个元素。注意和列表不同，集合是无序的，因此没有“最后一个元素”。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fruit = &#123;&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;, &quot;grapefruit&quot;&#125;  # define a set</span><br><span class="line"></span><br><span class="line">print(&quot;watermelon&quot; in fruit)  # check for element</span><br><span class="line"></span><br><span class="line">fruit.add(&quot;watermelon&quot;)  # add an element</span><br><span class="line">print(fruit)</span><br><span class="line"></span><br><span class="line">print(fruit.pop())  # remove a random element</span><br><span class="line">print(fruit)</span><br></pre></td></tr></table></figure>
-<p>输出结果为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">False</span><br><span class="line">&#123;&apos;grapefruit&apos;, &apos;orange&apos;, &apos;watermelon&apos;, &apos;banana&apos;, &apos;apple&apos;&#125;</span><br><span class="line">grapefruit</span><br><span class="line">&#123;&apos;orange&apos;, &apos;watermelon&apos;, &apos;banana&apos;, &apos;apple&apos;&#125;</span><br></pre></td></tr></table></figure>
-<p>你可以对集合执行的其他操作包括可以对数学集合执行的操作。可以对集合轻松地执行 union、intersection 和 difference 等方法，并且与其他容器相比，速度快了很多。</p>
-<p>练习：集合</p>
-<h2 id="练习：将列表转换为集合"><a href="#练习：将列表转换为集合" class="headerlink" title="练习：将列表转换为集合"></a>练习：将<code>列表</code>转换为<code>集合</code></h2><h3 id="习题-1-3"><a href="#习题-1-3" class="headerlink" title="习题 1/3"></a>习题 1/3</h3><p>下面的代码输出是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]</span><br><span class="line">b = set(a)</span><br><span class="line">print(len(a) - len(b))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>10</li>
-<li>6</li>
-<li>4</li>
-<li>Error</li>
-</ul>
-<p>提交</p>
-<h2 id="练习：add-和-pop"><a href="#练习：add-和-pop" class="headerlink" title="练习：add 和 pop"></a>练习：<code>add</code> 和 <code>pop</code></h2><h3 id="习题-2-3"><a href="#习题-2-3" class="headerlink" title="习题 2/3"></a>习题 2/3</h3><p>请看看以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]</span><br><span class="line">b = set(a)</span><br><span class="line">b.add(5)</span><br><span class="line">b.pop()</span><br></pre></td></tr></table></figure>
-<p>执行这段代码后，数字 5 会在集合 <code>b</code> 中吗？</p>
-<ul>
-<li>在</li>
-<li>不在</li>
-<li>可能在</li>
-<li>会产生错误</li>
-</ul>
-<p>提交</p>
-<h2 id="集合-1"><a href="#集合-1" class="headerlink" title="集合"></a>集合</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">## You may test any code out here. Use Test Run to see your output</span><br><span class="line">a = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]</span><br><span class="line">b = set(a)</span><br><span class="line">print(len(a) - len(b))</span><br><span class="line"></span><br><span class="line">a = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]</span><br><span class="line">b = set(a)</span><br><span class="line">b.add(5)</span><br><span class="line">b.pop()</span><br><span class="line">print(b)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1907,7 +1898,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
