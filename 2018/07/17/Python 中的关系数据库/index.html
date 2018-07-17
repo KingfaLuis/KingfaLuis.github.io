@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.简介2.课程大纲课程大纲 数据整理过程：  收集（本课内容） 评估 清理   收集数据是数据整理的第一步。收集之前，我们没有数据，但之后，我们就有了。 收集数据因项目而异。有时你只是给出数据，或像我在整个课程中一样，给你数据。有时需要搜索项目的正确数据。有时候，又没有所需要的数据，所以需要以某种方式生成数据。如果找到数据后，发现将其分散在多种不同的来源和文件格式中时与往常不一样，那么在编程环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/Python 中的关系数据库/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.简介2.课程大纲课程大纲 数据整理过程：  收集（本课内容） 评估 清理   收集数据是数据整理的第一步。收集之前，我们没有数据，但之后，我们就有了。 收集数据因项目而异。有时你只是给出数据，或像我在整个课程中一样，给你数据。有时需要搜索项目的正确数据。有时候，又没有所需要的数据，所以需要以某种方式生成数据。如果找到数据后，发现将其分散在多种不同的来源和文件格式中时与往常不一样，那么在编程环境">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/a54591db-bd3a-4dee-b715-d2c425b923d9">
+<meta property="og:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/b6160825-e01d-417a-82e1-09fa8f67a356">
+<meta property="og:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/6ac5779c-6c0b-4678-9b14-6a3146f1faea">
+<meta property="og:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/3432faf1-9fbd-4595-adb0-235cfa6a04d9">
+<meta property="og:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/eb4b4a85-0501-4772-9b5b-bc4326e4d3f2">
+<meta property="og:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/60859ec7-c115-44fc-b69a-76eff721e9cb">
+<meta property="og:updated_time" content="2018-07-17T09:26:39.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="1.简介2.课程大纲课程大纲 数据整理过程：  收集（本课内容） 评估 清理   收集数据是数据整理的第一步。收集之前，我们没有数据，但之后，我们就有了。 收集数据因项目而异。有时你只是给出数据，或像我在整个课程中一样，给你数据。有时需要搜索项目的正确数据。有时候，又没有所需要的数据，所以需要以某种方式生成数据。如果找到数据后，发现将其分散在多种不同的来源和文件格式中时与往常不一样，那么在编程环境">
+<meta name="twitter:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/a54591db-bd3a-4dee-b715-d2c425b923d9">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/Python 中的关系数据库/"/>
+
+
+
+
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/Python 中的关系数据库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T17:39:05+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h2 id="2-课程大纲"><a href="#2-课程大纲" class="headerlink" title="2.课程大纲"></a>2.课程大纲</h2><h3 id="课程大纲"><a href="#课程大纲" class="headerlink" title="课程大纲"></a>课程大纲</h3><blockquote>
+<p>数据整理过程：</p>
+<ul>
+<li>收集（本课内容）</li>
+<li>评估</li>
+<li>清理</li>
+</ul>
+</blockquote>
+<p><strong>收集</strong>数据是数据整理的第一步。收集之前，我们没有数据，但之后，我们就有了。</p>
+<p>收集数据因项目而异。有时你只是给出数据，或像我在整个课程中一样，给你数据。有时需要搜索项目的正确数据。有时候，又没有所需要的数据，所以需要以某种方式生成数据。如果找到数据后，发现将其分散在多种不同的来源和文件格式中时与往常不一样，那么在编程环境中组织数据就会很麻烦。</p>
+<p>由于这些原因或其他原因，收集数据可能会比较麻烦。在这节课中，这可能是课程最具技术性挑战的内容，你需要具备各种编码技能和一般技能，克服将来收集数据时可能会遇到的大部分问题。这有时候会很困难，不过没关系，好好坚持，也可以随时向我们寻求帮助。</p>
+<p><strong>这节课的结构如下：</strong></p>
+<ul>
+<li>首先，我们提出几个问题。</li>
+<li>然后，你将研究每个数据的来源，并回答这些问题，每个数据的来源和格式都不同。</li>
+<li>然后，将了解每种文件格式的结构。</li>
+<li>然后，将学习如何使用 Python 及其库来处理这种文件格式。</li>
+<li>最后，将实际收集每个数据，以便于以后在此基础上创建主数据集。</li>
+</ul>
+<h2 id="3-数据集：寻找更好的电影"><a href="#3-数据集：寻找更好的电影" class="headerlink" title="3.数据集：寻找更好的电影"></a>3.数据集：寻找更好的电影</h2><p>我想从网上下载一部电影来看</p>
+<p>提问：</p>
+<p>下载什么样的电影</p>
+<ul>
+<li>Rotten Tomatoes：前 100 部热门电影<ul>
+<li>注：当前列表可能与这节课中使用的最新归档列表不同</li>
+</ul>
+</li>
+<li><a href="http://www.rogerebert.com/" target="_blank" rel="noopener">RogerEbert.com</a></li>
+<li><a href="https://amueller.github.io/word_cloud/" target="_blank" rel="noopener">Andreas Mueller: Word Cloud Generator in Python</a></li>
+</ul>
+<hr>
+<h2 id="4-浏览工作目录和文件I-O"><a href="#4-浏览工作目录和文件I-O" class="headerlink" title="4.浏览工作目录和文件I/O"></a>4.浏览工作目录和文件I/O</h2><h3 id="浏览自己的工作目录和文件-I-O"><a href="#浏览自己的工作目录和文件-I-O" class="headerlink" title="浏览自己的工作目录和文件 I/O"></a>浏览自己的工作目录和文件 I/O</h3><p>继续进行这节课之前，请确保可以在 Python 中顺利使用计算机的命令行界面来访问文件和文件夹，以及可以正常读取和写入文件（也就是文件 I/O 的一部分或输入/输出）。这些操作看似简单，但实践起来非常困难。</p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>对于命令行界面，下面是我建议的三个较好的资源。选择最适合自己的资源：</p>
+<ul>
+<li>我们的简短 <a href="https://www.udacity.com/course/linux-command-line-basics--ud595" target="_blank" rel="noopener">Linux 命令行基础知识</a> 课程（适用于 Linux 和 Mac 用户）</li>
+<li><a href="https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855" target="_blank" rel="noopener">导航终端：简单介绍</a>（适用于 Mac 用户）（讲师：Marius Masalar）</li>
+<li><a href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands" target="_blank" rel="noopener">命令提示 - 如何使用简单的基本命令</a>（适用于 Windows 用户）（讲师：Codrut Neagu）</li>
+</ul>
+<p><a href="https://classroom.udacity.com/nanodegrees/nd678-cn-1/parts/085affaa-23c7-4d84-8825-765d370aae21/modules/93b5babd-13e7-4544-9e8b-59d95c3ee5b4/lessons/96402d84-c99d-4982-9edf-2430ef30d222/concepts/b674f69b-d097-4144-aa35-9e67597a175b#" target="_blank" rel="noopener"><img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/a54591db-bd3a-4dee-b715-d2c425b923d9" alt="命令行标志"></a></p>
+<h3 id="文件-I-O"><a href="#文件-I-O" class="headerlink" title="文件 I/O"></a>文件 I/O</h3><p>用于在 Python 中读取和写入文件：</p>
+<ul>
+<li><a href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank" rel="noopener">Python 简介</a> 第 5 课（“文件和模块”）中的“从文件读取”页面</li>
+</ul>
+<p>如果对上面的课程熟悉，可随意跳过这些资源，继续学习这节课程。</p>
+<p><a href="https://classroom.udacity.com/nanodegrees/nd678-cn-1/parts/085affaa-23c7-4d84-8825-765d370aae21/modules/93b5babd-13e7-4544-9e8b-59d95c3ee5b4/lessons/96402d84-c99d-4982-9edf-2430ef30d222/concepts/b674f69b-d097-4144-aa35-9e67597a175b#" target="_blank" rel="noopener"><img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/b6160825-e01d-417a-82e1-09fa8f67a356" alt="文件标志"></a>。</p>
+<hr>
+<h2 id="5-资料来源：手头文件"><a href="#5-资料来源：手头文件" class="headerlink" title="5.资料来源：手头文件"></a>5.资料来源：手头文件</h2><p><em>TSV从网上下载各类数据集</em></p>
+<p><strong>这个文件链接可能需要翻墙才能下载</strong></p>
+<ul>
+<li><a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/September/59ca594d_bestofrt/bestofrt.tsv" target="_blank" rel="noopener">Rotten Tomatoes：前 100 部热门电影 TSV 文件</a> <em>（注：Jupyter Notebook 工作区提供这个文件，所以如果需要，可在学习完 Udacity 课程后下载此文件）</em></li>
+</ul>
+<p><em>注：可以编程的方式从某些公司的文件存储系统（如 Google Drive）下载一些数据库的内部数据，但这通常比下载网页上托管的文件麻烦一些。但在实际操作中，通常不以编程方式下载内部文件，用于整理和分析/可视化/建模。</em></p>
+<hr>
+<h2 id="6-平面文件结构"><a href="#6-平面文件结构" class="headerlink" title="6.平面文件结构"></a>6.平面文件结构</h2><p>分隔符，tab, 逗号，空格</p>
+<p>对应的文件：tsv csv,</p>
+<p>平面文件包含明文格式的表格数据，每行一个数据记录，每个记录或行有一个或多个字段。这些字段由分隔符，如逗号、制表符或冒号分隔。</p>
+<p><strong>平面文件</strong>的优点包括：</p>
+<ul>
+<li>属于文本文件，因此可以读取。</li>
+<li>轻巧。</li>
+<li>简单易懂。</li>
+<li>可以读/写文本文件的软件随处可见，如文本编辑器。</li>
+<li>特别适用于小型数据集。</li>
+</ul>
+<p><strong>平面文件的缺点</strong>，例如与关系数据库相比，包括：</p>
+<ul>
+<li>缺乏标准。</li>
+<li>数据冗余。</li>
+<li>共享数据可能很麻烦。</li>
+<li>不太适用于大型数据集（请在<em>更多信息</em> 中单击 Cornell 链接，查阅<em>”小数据集何时升级为大数据集？”</em>）。</li>
+</ul>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>下面的文件是平面文件吗？在下面的练习中，将“是”或“否”与每个文件编号搭配起来。</p>
+<h3 id="文件＃1：animals-csv"><a href="#文件＃1：animals-csv" class="headerlink" title="文件＃1：animals.csv"></a>文件＃1：animals.csv</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd678-cn-1/parts/085affaa-23c7-4d84-8825-765d370aae21/modules/93b5babd-13e7-4544-9e8b-59d95c3ee5b4/lessons/96402d84-c99d-4982-9edf-2430ef30d222/concepts/042b7d1a-a644-4b22-b324-9b93617cfbc8#" target="_blank" rel="noopener"><img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/6ac5779c-6c0b-4678-9b14-6a3146f1faea" alt="img"></a></p>
+<h3 id="文件-＃2：animals-tsv"><a href="#文件-＃2：animals-tsv" class="headerlink" title="文件 ＃2：animals.tsv"></a>文件 ＃2：animals.tsv</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd678-cn-1/parts/085affaa-23c7-4d84-8825-765d370aae21/modules/93b5babd-13e7-4544-9e8b-59d95c3ee5b4/lessons/96402d84-c99d-4982-9edf-2430ef30d222/concepts/042b7d1a-a644-4b22-b324-9b93617cfbc8#" target="_blank" rel="noopener"><img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/3432faf1-9fbd-4595-adb0-235cfa6a04d9" alt="img"></a></p>
+<h3 id="文件-＃3：animals-txt"><a href="#文件-＃3：animals-txt" class="headerlink" title="文件 ＃3：animals.txt"></a>文件 ＃3：animals.txt</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd678-cn-1/parts/085affaa-23c7-4d84-8825-765d370aae21/modules/93b5babd-13e7-4544-9e8b-59d95c3ee5b4/lessons/96402d84-c99d-4982-9edf-2430ef30d222/concepts/042b7d1a-a644-4b22-b324-9b93617cfbc8#" target="_blank" rel="noopener"><img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/eb4b4a85-0501-4772-9b5b-bc4326e4d3f2" alt="img"></a></p>
+<h3 id="文件-＃4：animals-txt"><a href="#文件-＃4：animals-txt" class="headerlink" title="文件 ＃4：animals.txt"></a>文件 ＃4：animals.txt</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd678-cn-1/parts/085affaa-23c7-4d84-8825-765d370aae21/modules/93b5babd-13e7-4544-9e8b-59d95c3ee5b4/lessons/96402d84-c99d-4982-9edf-2430ef30d222/concepts/042b7d1a-a644-4b22-b324-9b93617cfbc8#" target="_blank" rel="noopener"><img src="https://s3.cn-north-1.amazonaws.com.cn/u-img/60859ec7-c115-44fc-b69a-76eff721e9cb" alt="img"></a></p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>平面文件?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>#1: animals.csv</td>
+<td>是</td>
+</tr>
+<tr>
+<td>#2: animals.tsv</td>
+<td>是</td>
+</tr>
+<tr>
+<td>#3 animals.txt</td>
+<td>否</td>
+</tr>
+<tr>
+<td>#4 animals.txt</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="更多信息"><a href="#更多信息" class="headerlink" title="更多信息"></a>更多信息</h3><ul>
+<li><a href="http://professor-excel.com/xml-zip-excel-file-structure/" target="_blank" rel="noopener">教授 Excel：XML 和 ZIP：浏览你的 Excel 工作簿文件结构</a></li>
+<li><a href="https://www.cac.cornell.edu/education/Training/DataAnalysis/RelationalDatabases.pdf" target="_blank" rel="noopener">Cornell：关系数据库 - 非父系平面文件</a></li>
+</ul>
+<hr>
+<hr>
+<h2 id="7-python中的平面文件"><a href="#7-python中的平面文件" class="headerlink" title="7.python中的平面文件"></a>7.python中的平面文件</h2><p>就是读入CSV文件，使用read_csv。这部分在pandas文档中清楚的列出了，读取文件以及设置格式的方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">'bestofrt.csv'</span>,sep=<span class="string">'\t'</span>)</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+<h3 id="更多信息-1"><a href="#更多信息-1" class="headerlink" title="更多信息"></a>更多信息</h3><ul>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/api.html#flat-file" target="_blank" rel="noopener">pandas：平面文件功能</a>.</li>
+</ul>
+<hr>
+<h2 id="8-资料来源：web数据抓取"><a href="#8-资料来源：web数据抓取" class="headerlink" title="8.资料来源：web数据抓取"></a>8.资料来源：web数据抓取</h2><p>把网页下载下来使用BS4库解析网页结构。</p>
+<ul>
+<li><a href="https://www.rottentomatoes.com/m/et_the_extraterrestrial" target="_blank" rel="noopener">Rotten Tomatoes: E.T. 外星人 (1982)</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener">Beautiful Soup</a>。</li>
+</ul>
+<p>使用 HTML 文件的两个主要方法是：</p>
+<ul>
+<li>将 HTML 文件保存到计算机中（例如使用 <a href="http://docs.python-requests.org/en/master" target="_blank" rel="noopener">Requests</a>）库），并将文件读入 <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener"><code>BeautifulSoup</code></a> 构造函数中</li>
+<li>将 HTML 响应内容直接读入 <code>BeautifulSoup</code> 构造函数（例如再次使用 Requests 库）</li>
+</ul>
+<p>我们一会儿将在“从互联网下载文件”中学习此请求代码在后台的运行原理。</p>
+<p>在这节课中你不用执行这些操作。我已经下载了所有 Rotten Tomatoes HTML 文件，并将它们放在 Udacity 教室的 Jupyter notebook 中一个名为 <em>rt_html</em> 的文件夹里。如果你想在课程结束后操作，请下载 <a href="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b2b57c4_rt-html/rt-html.zip" target="_blank" rel="noopener">这个 zip 文件</a>，并解压 <em>rt_html</em> 文件夹。我建议你在自己首选的文本编辑器（例如 <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime</a>，这应该是免费软件，可以打开 HTML 文件），查看此前练习的 HTML。</p>
+<p><em>rt_html</em> 文件夹包含前 100 部热门电影的 Rotten Tomatoes HTML 列表，这也是这节课最新更新的列表。我会给你提供这些历史文件，因为评分会随着时间的推移而改变，从而导致与录制的课程视频不一致。此外，我们知道网页的 HTML 也会随时间发生变化。重新设计网页时，抓取代码很容易被更改，这使得数据抓取容易出错，所以不推荐长期项目使用。所以只需使用提供给你们的这些 HTML 文件，并用上述任一方法保存它们。</p>
+<h3 id="更多信息-2"><a href="#更多信息-2" class="headerlink" title="更多信息"></a>更多信息</h3><ul>
+<li><a href="https://medium.com/towards-data-science/ethics-in-web-scraping-b96b18136f01" target="_blank" rel="noopener">面向数据科学：Web 数据抓取理论</a></li>
+<li><a href="https://twitter.com/venturidb/status/734757220525715456" target="_blank" rel="noopener">David Venturi：屏幕抓取是第一个让我对编程感兴趣的“神奇”功能</a> （注： 该页面需要 VPN 访问）</li>
+</ul>
+<h4 id="辅助材料"><a href="#辅助材料" class="headerlink" title="辅助材料"></a>辅助材料</h4><p><a href="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/June/5b2b57c4_rt-html/rt-html.zip" target="_blank" rel="noopener"> Rt-Html</a>。</p>
+<hr>
+<h2 id="9-HTML文件结构"><a href="#9-HTML文件结构" class="headerlink" title="9.HTML文件结构"></a>9.HTML文件结构</h2><h3 id="HTML-文件结构"><a href="#HTML-文件结构" class="headerlink" title="HTML 文件结构"></a>HTML 文件结构</h3><p>超文本标记语言（或 HTML）是为万维网创建文档的语言。</p>
+<p>我们来看看 <a href="http://cameronwp.com/" target="_blank" rel="noopener">Cameron Pittman</a>，Udacity 中的讲师和全栈工程师，他主要介绍了 HTML 文件的基本结构。观看下面三个简短的视频，了解开始 Web 数据抓取所需的全部知识。如果想了解更多信息，或者想要扩大自己的知识面，可以查看 Cameron 的 “HTML 和 CSS 简介” 课程。请单击 <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304" target="_blank" rel="noopener">此处</a>。</p>
+<p>按照视频介绍的方法操作时，打开你在文本编辑器（如 Sublime）中下载的一个 HTML 文件，并在 Cameron 作为样例的 HTML 文档中找到相似之处。我们稍后将进行这些操作。</p>
+<h3 id="HTML-结构"><a href="#HTML-结构" class="headerlink" title="HTML 结构"></a>HTML 结构</h3><p><a href="https://www.cnblogs.com/Arsene/p/6661253.html" target="_blank" rel="noopener">文件结构的各项含义</a>.可以参考这个博客，讲得非常的详细。</p>
+<p>HTML树的结构，以及各层级之间的的关系，各层级之间可以相互包含各类标签。</p>
+<p>通过数结构，分清各层级之间的关系，哪些是父辈，哪些是同级的字辈。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#一段简单的HTML代码</span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">        Article Title</span><br><span class="line">    <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        Paragraph of text.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="col-sm-8 col-xs-12 audience-panel"&gt;</span><br><span class="line">  &lt;h3 class="scoreTitle superPageFontColor"&gt;AUDIENCE SCORE &lt;span class="glyphicon glyphicon-question-sign hidden-xs" data-placement="bottom" data-toggle="tooltip" rel="tooltip" title="The percentage of users who have rated this movie 3.5 stars or higher"&gt;&lt;/span&gt;&lt;/h3&gt;</span><br><span class="line">  &lt;div class="audience-score meter"&gt;</span><br><span class="line">    &lt;a class="unstyled articleLink" href="#audience_reviews"&gt;</span><br><span class="line">    &lt;div class="meter media"&gt;</span><br><span class="line">      &lt;div class="meter-tomato icon big medium-xs upright pull-left"&gt;&lt;/div&gt;</span><br><span class="line">      &lt;div class="media-body" style="line-height:36px"&gt;</span><br><span class="line">        &lt;div class="meter-value"&gt;</span><br><span class="line">          &lt;span class="superPageFontColor" style="vertical-align:top"&gt;72%&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class="smaller bold hidden-xs superPageFontColor" style="padding-left:5px;line-height:12px"&gt;</span><br><span class="line">          liked it</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;&lt;/a&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class="audience-info hidden-xs superPageFontColor"&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;span class="subtle superPageFontColor"&gt;Average Rating:&lt;/span&gt; 3.5/5</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;span class="subtle superPageFontColor"&gt;User Ratings:&lt;/span&gt; 32,313,030</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class="col-full-xs visible-xs clearfix"&gt;</span><br><span class="line">  &lt;p class="critic_consensus tomato-info noSpacing superPageFontColor"&gt;&lt;span class="subtle superPageFontColor"&gt;Critic Consensus:&lt;/span&gt; Playing as both an exciting sci-fi adventure and a remarkable portrait of childhood, Steven Spielberg's touching tale of a homesick alien remains a piece of movie magic for young and old.&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AUDIENCE SCORE</span><br><span class="line">72%</span><br><span class="line">liked it</span><br><span class="line">Average Rating: 3.5/5</span><br><span class="line">User Ratings: 32,313,030</span><br><span class="line">Critic Consensus: Playing as both an exciting sci-fi adventure and a remarkable portrait of childhood, Steven Spielberg&apos;s touching tale of a homesick alien remains a piece of movie magic for young and old.</span><br></pre></td></tr></table></figure>
+<p>以上是一段HTML代码，以及最后的输出结果.</p>
+<hr>
+<h2 id="10-python中的HTML文件"><a href="#10-python中的HTML文件" class="headerlink" title="10.python中的HTML文件"></a>10.python中的HTML文件</h2><h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><p>根据对 HTML 文件结构的了解，你将使用 <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener">Beautiful Soup</a> 来提取对于每个 HTML 文件，我们所需的观众评分指标和观众评分得数，以及上面视频中的电影标题（所以我们稍后将合并数据集），然后将它们保存在 pandas DataFrame 中。</p>
+<ul>
+<li>创建一个空列表 <em>df_list</em> ，并附加字典。这个词典列表最终将被转换为 pandas DataFrame（这是 <a href="https://stackoverflow.com/a/28058264" target="_blank" rel="noopener">逐行构建 DataFrame 的最有效方式</a>)。</li>
+<li>通过 <em>rt_html</em> 文件夹中每个电影的 Rotten Tomatoes HTML 文件循环播放。</li>
+<li>打开每个 HTML 文件，并将其传达到一个名为 <em>file</em> 的文件句柄中。</li>
+<li>通过使用 <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html" target="_blank" rel="noopener"><code>pd.DataFrame</code> 构造函数</a> 转换 <em>df_list</em> 来创建名为 <em>df</em> 的 DataFrame。</li>
+</ul>
+<p>你的任务是提取每个 HTML 文件的标题、观众得分和观众评分得数，并三个一组作为字典附加到 <em>df_list</em> 。</p>
+<p>这个任务所需的 Beautiful Soup 方法是：</p>
+<ul>
+<li><code>find()</code></li>
+<li><code>find_all</code></li>
+</ul>
+<p>关于这些方法，有一个不错的教程（在 Beautiful Soup 文档中 <a href="https://www.crummy.com/software/BeautifulSoup/bs4%20/%20doc%20/%EF%BC%83searching-the-tree" target="_blank" rel="noopener">搜索树</a>）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 字典列表可以逐个创建文件，随后转化为一个 DataFrame</span></span><br><span class="line">df_list = []</span><br><span class="line">folder = <span class="string">'rt_html'</span></span><br><span class="line"><span class="keyword">for</span> movie_html <span class="keyword">in</span> os.listdir(folder):</span><br><span class="line">    <span class="keyword">with</span> open(os.path.join(folder, movie_html)) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="comment"># 这里是你的代码</span></span><br><span class="line">        <span class="comment"># 注释：正确操作需要花费 ~15 秒运行</span></span><br><span class="line">	    soup = BeautifulSoup(file)</span><br><span class="line">        title = soup.find(<span class="string">'title'</span>).content[<span class="number">0</span>][:len(<span class="string">' - Rotten Tomatoes'</span>)]</span><br><span class="line">        audience_score = soup.find('div',class = ).contents[0][:]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 添加到字典列表中</span></span><br><span class="line">        df_list.append(&#123;<span class="string">'title'</span>: title,</span><br><span class="line">                        <span class="string">'audience_score'</span>: int(audience_score),</span><br><span class="line">                        <span class="string">'number_of_audience_ratings'</span>: int(num_audience_ratings)&#125;)</span><br><span class="line">df = pd.DataFrame(df_list, columns = [<span class="string">'title'</span>, <span class="string">'audience_score'</span>, <span class="string">'number_of_audience_ratings'</span>])</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="11-Flashforward-1"><a href="#11-Flashforward-1" class="headerlink" title="11.Flashforward 1"></a>11.Flashforward 1</h2><ul>
+<li><a href="https://public.tableau.com/views/BestofRottenTomatoesCriticvs_AudienceScores/BestofRottenTomatoesCriticvs_AudienceScores?:embed=y&amp;:display_count=yes" target="_blank" rel="noopener">Best of Rotten Tomatoes: Critic vs. Audience Scores (Tableau Public Viz)</a>.</li>
+</ul>
+<p>使用tableau可视化出分析的结果。</p>
+<h2 id="20-存储数据"><a href="#20-存储数据" class="headerlink" title="20.存储数据"></a>20.存储数据</h2><h2 id="存储数据"><a href="#存储数据" class="headerlink" title="存储数据"></a>存储数据</h2><p>通常在清理后存储数据，但也并非总是这样，所以数据整理过程的核心部分不包括数据存储。有时只需要分析和可视化，不需要保存新数据。</p>
+<p>其次，因为清理数据后再进行存储，所以我们可以在第 4 课(“清理数据”)结束时对这加以说明。但是，我们将在这节课介绍文件格式，我们现在来具体看看。</p>
+<p>设想一下，你已经评估并清理了数据，其中包括合并所有这些单独数据，我在最后一个视频中已经说过，我已经处理了所有后台工作，那么你想下一步做些什么？</p>
+<p>我们已在“平面文件结构”概念那节课中讨论过平面文件的优缺点。其中一个优点是：</p>
+<blockquote>
+<p>非常适用于小数据集。</p>
+</blockquote>
+<p>而其中的一个缺点是：</p>
+<blockquote>
+<p>共享数据可能比较麻烦。</p>
+</blockquote>
+<p>考虑到数据集的大小和可能不会共享这些数据集，所以将其保存到像 CSV 这样的平面文件可能是最好的解决方案。使用 pandas 将收集的数据保存到 CSV 文件很容易。<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html" target="_blank" rel="noopener"><code>to_csv</code> DataFrame 方法</a> 已经足够了，<em>将文件保存到计算机</em> 所需要的唯一一个参数是要保存这个文件的文件路径。如果不希望 DataFrame 索引在存储的数据集中显示为列，通常还需要指定 <code>index=False</code>。如果你有一个 DataFrame <em>df</em> ，并想保存到一个没有索引列且名为 <em>dataset.csv</em> 的文件中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.to_csv(<span class="string">'dataset.csv'</span>, index=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="22-Python-中的关系数据库"><a href="#22-Python-中的关系数据库" class="headerlink" title="22.Python 中的关系数据库"></a>22.Python 中的关系数据库</h2><h3 id="数据整理和关系数据库"><a href="#数据整理和关系数据库" class="headerlink" title="数据整理和关系数据库"></a>数据整理和关系数据库</h3><p>在数据整理过程中，我们建议数据库和 SQL 仅用于收集数据或存储数据。也就是说：</p>
+<ul>
+<li><strong>连接到数据库并将数据</strong>导入到 pandas DataFrame(或首选编程语言的类似数据结构)中，然后评估和清理这些数据，或</li>
+<li><strong>连接到数据库并存储</strong>我们刚刚收集(可能来自数据库)、评估和清理的数据</li>
+</ul>
+<p>如果数据量比较大，这些处理工作将特别有用，而且 SQL 和数据库非常适合平面文件。</p>
+<p>可以将上述两种情况进一步分为三个主要任务：</p>
+<ul>
+<li>连接 Python 中的数据库</li>
+<li>将 <strong>pandas DataFrame</strong> 里的数据储存至你所连接的数据库中，以及</li>
+<li>将你所连接的数据库里的数据导入至 <strong>pandas DataFarme</strong> 中。</li>
+</ul>
+<h3 id="本节课"><a href="#本节课" class="headerlink" title="本节课"></a>本节课</h3><p>对于这节课中的示例，我们将按顺序操作：</p>
+<ol>
+<li>连接到数据库。我们将使用 <a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a> 连接到 SQLite 数据库，这是 Python 的数据库工具包。</li>
+<li>将数据存储在数据库中经清理的主数据集中。我们将使用 pandas 的 <code>to_csv</code> DataFrame 方法存储数据。</li>
+<li>然后将该数据库中的全新数据读取到 pandas DataFrame 中。我们将使用 pandas 的 <code>read_csv</code> 函数来进行这些操作。</li>
+</ol>
+<p>这节课不需要进行第三条，但是有时候在工作过程中，会在项目开始时为你提供一个数据库。这就不一定必须得下载文件、抓取网页、点击 API 等。</p>
+<p>我们将在下面的 Jupyter Notebook 中介绍和执行上面三种操作。</p>
+<h3 id="在-SQL-中进行数据整理？"><a href="#在-SQL-中进行数据整理？" class="headerlink" title="在 SQL 中进行数据整理？"></a>在 SQL 中进行数据整理？</h3><p>实际上可以在 <em>SQL</em> 中进行数据整理，但是我们认为 pandas 更适合收集 (pandas 在这方面有很大的优势，而且操作起来简单)、评估和清理数据，所以我们建议你使用 pandas。一般来说，<a href="https://www.reddit.com/r/Python/comments/1tqjt4/why_do_you_use_pandas_instead_of_sql/" target="_blank" rel="noopener">讨论 pandas 与 SQL 的 Reddit thread</a> 还是比较有趣的，还涉及几个与数据整理有关的主题。</p>
+<hr>
+<h2 id="22-python中的关系数据库"><a href="#22-python中的关系数据库" class="headerlink" title="22.python中的关系数据库"></a>22.python中的关系数据库</h2><h3 id="数据整理和关系数据库-1"><a href="#数据整理和关系数据库-1" class="headerlink" title="数据整理和关系数据库"></a>数据整理和关系数据库</h3><p>在数据整理过程中，我们建议数据库和 SQL 仅用于收集数据或存储数据。也就是说：</p>
+<ul>
+<li><strong>连接到数据库并将数据</strong>导入到 pandas DataFrame(或首选编程语言的类似数据结构)中，然后评估和清理这些数据，或</li>
+<li><strong>连接到数据库并存储</strong>我们刚刚收集(可能来自数据库)、评估和清理的数据</li>
+</ul>
+<p>如果数据量比较大，这些处理工作将特别有用，而且 SQL 和数据库非常适合平面文件。</p>
+<p>可以将上述两种情况进一步分为三个主要任务：</p>
+<ul>
+<li>连接 Python 中的数据库</li>
+<li>将 <strong>pandas DataFrame</strong> 里的数据储存至你所连接的数据库中，以及</li>
+<li>将你所连接的数据库里的数据导入至 <strong>pandas DataFarme</strong> 中。</li>
+</ul>
+<h3 id="本节课-1"><a href="#本节课-1" class="headerlink" title="本节课"></a>本节课</h3><p>对于这节课中的示例，我们将按顺序操作：</p>
+<ol>
+<li>连接到数据库。我们将使用 <a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a> 连接到 SQLite 数据库，这是 Python 的数据库工具包。</li>
+<li>将数据存储在数据库中经清理的主数据集中。我们将使用 pandas 的 <code>to_csv</code> DataFrame 方法存储数据。</li>
+<li>然后将该数据库中的全新数据读取到 pandas DataFrame 中。我们将使用 pandas 的 <code>read_csv</code> 函数来进行这些操作。</li>
+</ol>
+<p>这节课不需要进行第三条，但是有时候在工作过程中，会在项目开始时为你提供一个数据库。这就不一定必须得下载文件、抓取网页、点击 API 等。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/17/relation SQL in python/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-简介"><span class="nav-number">1.</span> <span class="nav-text">1.简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-课程大纲"><span class="nav-number">2.</span> <span class="nav-text">2.课程大纲</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#课程大纲"><span class="nav-number">2.1.</span> <span class="nav-text">课程大纲</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-数据集：寻找更好的电影"><span class="nav-number">3.</span> <span class="nav-text">3.数据集：寻找更好的电影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-浏览工作目录和文件I-O"><span class="nav-number">4.</span> <span class="nav-text">4.浏览工作目录和文件I/O</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览自己的工作目录和文件-I-O"><span class="nav-number">4.1.</span> <span class="nav-text">浏览自己的工作目录和文件 I/O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行"><span class="nav-number">4.2.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件-I-O"><span class="nav-number">4.3.</span> <span class="nav-text">文件 I/O</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-资料来源：手头文件"><span class="nav-number">5.</span> <span class="nav-text">5.资料来源：手头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-平面文件结构"><span class="nav-number">6.</span> <span class="nav-text">6.平面文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#练习"><span class="nav-number">6.1.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件＃1：animals-csv"><span class="nav-number">6.2.</span> <span class="nav-text">文件＃1：animals.csv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件-＃2：animals-tsv"><span class="nav-number">6.3.</span> <span class="nav-text">文件 ＃2：animals.tsv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件-＃3：animals-txt"><span class="nav-number">6.4.</span> <span class="nav-text">文件 ＃3：animals.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件-＃4：animals-txt"><span class="nav-number">6.5.</span> <span class="nav-text">文件 ＃4：animals.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多信息"><span class="nav-number">6.6.</span> <span class="nav-text">更多信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-python中的平面文件"><span class="nav-number">7.</span> <span class="nav-text">7.python中的平面文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更多信息-1"><span class="nav-number">7.1.</span> <span class="nav-text">更多信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-资料来源：web数据抓取"><span class="nav-number">8.</span> <span class="nav-text">8.资料来源：web数据抓取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更多信息-2"><span class="nav-number">8.1.</span> <span class="nav-text">更多信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#辅助材料"><span class="nav-number">8.1.1.</span> <span class="nav-text">辅助材料</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-HTML文件结构"><span class="nav-number">9.</span> <span class="nav-text">9.HTML文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-文件结构"><span class="nav-number">9.1.</span> <span class="nav-text">HTML 文件结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-结构"><span class="nav-number">9.2.</span> <span class="nav-text">HTML 结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-python中的HTML文件"><span class="nav-number">10.</span> <span class="nav-text">10.python中的HTML文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#练习-1"><span class="nav-number">10.1.</span> <span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Flashforward-1"><span class="nav-number">11.</span> <span class="nav-text">11.Flashforward 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-存储数据"><span class="nav-number">12.</span> <span class="nav-text">20.存储数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储数据"><span class="nav-number">13.</span> <span class="nav-text">存储数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-Python-中的关系数据库"><span class="nav-number">14.</span> <span class="nav-text">22.Python 中的关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据整理和关系数据库"><span class="nav-number">14.1.</span> <span class="nav-text">数据整理和关系数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本节课"><span class="nav-number">14.2.</span> <span class="nav-text">本节课</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-SQL-中进行数据整理？"><span class="nav-number">14.3.</span> <span class="nav-text">在 SQL 中进行数据整理？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-python中的关系数据库"><span class="nav-number">15.</span> <span class="nav-text">22.python中的关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据整理和关系数据库-1"><span class="nav-number">15.1.</span> <span class="nav-text">数据整理和关系数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本节课-1"><span class="nav-number">15.2.</span> <span class="nav-text">本节课</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
