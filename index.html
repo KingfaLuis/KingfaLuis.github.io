@@ -394,7 +394,7 @@
       
         <h2 id="Python-中的关系数据库"><a href="#Python-中的关系数据库" class="headerlink" title="Python 中的关系数据库"></a>Python 中的关系数据库</h2><h3 id="数据整理和关系数据库"><a href="#数据整理和关系数据库" class="headerlink" title="数据整理和关系数据库"></a>数据整理和关系数据库</h3><p>在数据整理过程中，我们建议数据库和 SQL 仅用于收集数据或存储数据。也就是说：</p>
 <ul>
-<li><strong>连接到数据库并将数据</strong>导入到 pandas DataFrame(或首选编程语言的类似数据结构)中，然后评估和清理这些数据，或</li>
+<li><strong>连接到数据库并将数据</strong>导入到 pandas DataFrame(或首选编程语言的类似数据结构)中，然后评估和清理这些数据</li>
 <li><strong>连接到数据库并存储</strong>我们刚刚收集(可能来自数据库)、评估和清理的数据</li>
 </ul>
 <p>如果数据量比较大，这些处理工作将特别有用，而且 SQL 和数据库非常适合平面文件。</p>
@@ -404,15 +404,11 @@
 <li>将 <strong>pandas DataFrame</strong> 里的数据储存至你所连接的数据库中，以及</li>
 <li>将你所连接的数据库里的数据导入至 <strong>pandas DataFarme</strong> 中。</li>
 </ul>
-<h3 id="本节课"><a href="#本节课" class="headerlink" title="本节课"></a>本节课</h3><p>对于这节课中的示例，我们将按顺序操作：</p>
-<ol>
-<li>连接到数据库。我们将使用 <a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a> 连接到 SQLite 数据库，这是 Python 的数据库工具包。</li>
-<li>将数据存储在数据库中经清理的主数据集中。我们将使用 pandas 的 <code>to_csv</code> DataFrame 方法存储数据。</li>
-<li>然后将该数据库中的全新数据读取到 pandas DataFrame 中。我们将使用 pandas 的 <code>read_csv</code> 函数来进行这些操作。</li>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
+<li>连接到数据库。使用 <a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener">SQLAlchemy</a> 连接到 SQLite 数据库，这是 Python 的数据库工具包。</li>
+<li>将数据存储在数据库中经清理的主数据集中。使用 pandas 的 <code>to_csv</code> DataFrame 方法存储数据。</li>
+<li>然后将该数据库中的全新数据读取到 pandas DataFrame 中。使用 pandas 的 <code>read_csv</code> 函数来进行这些操作。</li>
 </ol>
-<p>这节课不需要进行第三条，但是有时候在工作过程中，会在项目开始时为你提供一个数据库。这就不一定必须得下载文件、抓取网页、点击 API 等。</p>
-<p>我们将在下面的 Jupyter Notebook 中介绍和执行上面三种操作。</p>
-<h3 id="在-SQL-中进行数据整理？"><a href="#在-SQL-中进行数据整理？" class="headerlink" title="在 SQL 中进行数据整理？"></a>在 SQL 中进行数据整理？</h3><p>实际上可以在 <em>SQL</em> 中进行数据整理，但是我们认为 pandas 更适合收集 (pandas 在这方面有很大的优势，而且操作起来简单)、评估和清理数据，所以我们建议你使用 pandas。一般来说，<a href="https://www.reddit.com/r/Python/comments/1tqjt4/why_do_you_use_pandas_instead_of_sql/" target="_blank" rel="noopener">讨论 pandas 与 SQL 的 Reddit thread</a> 还是比较有趣的，还涉及几个与数据整理有关的主题。</p>
 
       
     </div>
