@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MIN和MAX的用法计算列的最小值和最大值。 注意，MIN 和 MAX 聚合函数也会忽略 NULL 值。 提示从功能上来说，MIN 和 MAX 与 COUNT 相似，它们都可以用在非数字列上。MIN 将返回最小的数字、最早的日期或按字母表排序的最之前的非数字值，具体取决于列类型。MAX 则正好相反，返回的是最大的数字、最近的日期，或与“Z”最接近（按字母表顺序排列）的非数字值。 练习使用MIN，M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/25/4_MIN和MAX的用法和案例/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MIN和MAX的用法计算列的最小值和最大值。 注意，MIN 和 MAX 聚合函数也会忽略 NULL 值。 提示从功能上来说，MIN 和 MAX 与 COUNT 相似，它们都可以用在非数字列上。MIN 将返回最小的数字、最早的日期或按字母表排序的最之前的非数字值，具体取决于列类型。MAX 则正好相反，返回的是最大的数字、最近的日期，或与“Z”最接近（按字母表顺序排列）的非数字值。 练习使用MIN，M">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-24T17:13:31.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="MIN和MAX的用法计算列的最小值和最大值。 注意，MIN 和 MAX 聚合函数也会忽略 NULL 值。 提示从功能上来说，MIN 和 MAX 与 COUNT 相似，它们都可以用在非数字列上。MIN 将返回最小的数字、最早的日期或按字母表排序的最之前的非数字值，具体取决于列类型。MAX 则正好相反，返回的是最大的数字、最近的日期，或与“Z”最接近（按字母表顺序排列）的非数字值。 练习使用MIN，M">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-4_MIN和MAX的用法和案例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/25/4_MIN和MAX的用法和案例/" class="article-date">
+  <time datetime="2018-07-24T17:44:42.458Z" itemprop="datePublished">2018-07-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MIN和MAX的用法"><a href="#MIN和MAX的用法" class="headerlink" title="MIN和MAX的用法"></a>MIN和MAX的用法</h1><p>计算列的最小值和最大值。</p>
+<p>注意，<strong>MIN</strong> 和 <strong>MAX</strong> 聚合函数也会忽略 <strong>NULL</strong> 值。</p>
+<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>从功能上来说，<strong>MIN</strong> 和 <strong>MAX</strong> 与 <strong>COUNT</strong> 相似，它们都可以用在非数字列上。<strong>MIN</strong> 将返回最小的数字、最早的日期或按字母表排序的最之前的非数字值，具体取决于列类型。<strong>MAX</strong> 则正好相反，返回的是最大的数字、最近的日期，或与“Z”最接近（按字母表顺序排列）的非数字值。</p>
+<h1 id="练习使用MIN，MAX和AVG"><a href="#练习使用MIN，MAX和AVG" class="headerlink" title="练习使用MIN，MAX和AVG"></a>练习使用MIN，MAX和AVG</h1><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<li>最早的订单下于何时？</li>
+<li>尝试执行和第一个问题一样的查询，但是不使用聚合函数。</li>
+<li>最近的 <strong>web_event</strong> 发生在什么时候？</li>
+<li>尝试以另一种方式执行上个问题的查询，不使用聚合函数。</li>
+<li>算出每个订单在每种纸张上消费的平均 (<strong>AVERAGE</strong>) 金额，以及每个订单针对每种纸张购买的平均数量。最终答案应该有 6 个值，每个纸张类型平均销量对应一个值，以及平均数量对应一个值。</li>
+<li>在所有订单上消费的中值 <strong>total_usd</strong> 是多少？</li>
+</ol>
+<p>根据<strong>SQL</strong> 表格信息回答。</p>
+<p>1.最早的订单下于何时？</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(occurred_at) </span><br><span class="line"><span class="keyword">FROM</span> orders;</span><br></pre></td></tr></table></figure>
+<p>2.尝试执行和第一个问题一样的查询，但是不使用聚合函数。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> occurred_at </span><br><span class="line"><span class="keyword">FROM</span> orders </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> occurred_at</span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>3.最近的 <strong>web_event</strong> 发生在什么时候？ </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(occurred_at)</span><br><span class="line"><span class="keyword">FROM</span> web_events;</span><br></pre></td></tr></table></figure>
+<p>4.尝试以另一种方式执行上个问题的查询，不使用聚合函数。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> occurred_at</span><br><span class="line"><span class="keyword">FROM</span> web_events</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> occurred_at <span class="keyword">DESC</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>5.算出每个订单在每种纸张上消费的平均 (<strong>AVERAGE</strong>) 金额，以及每个订单针对每种纸张购买的平均数量。最终答案应该有 6 个值，每个纸张类型平均销量对应一个值，以及平均数量对应一个值。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(standard_qty) mean_standard, <span class="keyword">AVG</span>(gloss_qty) mean_gloss, </span><br><span class="line">           <span class="keyword">AVG</span>(poster_qty) mean_poster, <span class="keyword">AVG</span>(standard_amt_usd) mean_standard_usd, </span><br><span class="line">           <span class="keyword">AVG</span>(gloss_amt_usd) mean_gloss_usd, <span class="keyword">AVG</span>(poster_amt_usd) mean_poster_usd</span><br><span class="line"><span class="keyword">FROM</span> orders;</span><br></pre></td></tr></table></figure>
+<p>6.如何计算中位数呢？问题：对于所有订单（orders）数据，其total_usd字段的中位数是多少？</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *</span><br><span class="line"><span class="keyword">FROM</span> (<span class="keyword">SELECT</span> total_amt_usd</span><br><span class="line">      <span class="keyword">FROM</span> orders</span><br><span class="line">      <span class="keyword">ORDER</span> <span class="keyword">BY</span> total_amt_usd</span><br><span class="line">      <span class="keyword">LIMIT</span> <span class="number">3457</span>) <span class="keyword">AS</span> Table1</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> total_amt_usd <span class="keyword">DESC</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<p>因为订单一共有6912个，因此我们需要第3456和第3457个订单（按total_amt_usd排序）的total_amt_usd字段的平均值。这样就能得出中位数结果，为<strong>2482.855</strong>。这显然不是一个好办法。如果我们有了新订单，再次计算时就必须修改LIMIT。SQL实际上并不会为我们计算中位数。以上代码使用了一个子查询（SUBQUERY），但你可以使用任何方法找到需要的两个值，然后再求平均即可得到中位数。 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/25/4_MIN和MAX的用法和案例/" data-id="cjjzzrbll0004bsjhwl4jdfji" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/25/抓取淘宝店铺指标信息项目/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/25/3_count和null 的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/25/抓取淘宝店铺指标信息项目/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/4_MIN和MAX的用法和案例/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/3_count和null 的使用/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/2_聚合函数count的使用/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/1_NULL和聚合的用法/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

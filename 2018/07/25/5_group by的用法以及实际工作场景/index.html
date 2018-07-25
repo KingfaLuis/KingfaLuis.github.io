@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="GROUP BY的用法以及实际工作场景GROUP BY知识点主要知识点包括：  GROUP BY 可以用来在数据子集中聚合数据。例如，不同客户、不同区域或不同销售代表分组。 SELECT 语句中的任何一列如果不在聚合函数中，则必须在 GROUP BY 条件中。 GROUP BY 始终在 WHERE 和 ORDER BY 之间。 ORDER BY 有点像电子表格软件中的 SORT。  问题：根据以下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/25/5_group by的用法以及实际工作场景/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="GROUP BY的用法以及实际工作场景GROUP BY知识点主要知识点包括：  GROUP BY 可以用来在数据子集中聚合数据。例如，不同客户、不同区域或不同销售代表分组。 SELECT 语句中的任何一列如果不在聚合函数中，则必须在 GROUP BY 条件中。 GROUP BY 始终在 WHERE 和 ORDER BY 之间。 ORDER BY 有点像电子表格软件中的 SORT。  问题：根据以下">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-25T02:53:13.144Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="GROUP BY的用法以及实际工作场景GROUP BY知识点主要知识点包括：  GROUP BY 可以用来在数据子集中聚合数据。例如，不同客户、不同区域或不同销售代表分组。 SELECT 语句中的任何一列如果不在聚合函数中，则必须在 GROUP BY 条件中。 GROUP BY 始终在 WHERE 和 ORDER BY 之间。 ORDER BY 有点像电子表格软件中的 SORT。  问题：根据以下">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-5_group by的用法以及实际工作场景" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/25/5_group by的用法以及实际工作场景/" class="article-date">
+  <time datetime="2018-07-24T17:44:42.453Z" itemprop="datePublished">2018-07-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GROUP-BY的用法以及实际工作场景"><a href="#GROUP-BY的用法以及实际工作场景" class="headerlink" title="GROUP BY的用法以及实际工作场景"></a>GROUP BY的用法以及实际工作场景</h1><h2 id="GROUP-BY知识点"><a href="#GROUP-BY知识点" class="headerlink" title="GROUP BY知识点"></a>GROUP BY知识点</h2><p>主要知识点包括：</p>
+<ul>
+<li><strong>GROUP BY</strong> 可以用来在数据子集中聚合数据。例如，不同客户、不同区域或不同销售代表分组。</li>
+<li><strong>SELECT</strong> 语句中的任何一列如果不在聚合函数中，则必须在 <strong>GROUP BY</strong> 条件中。</li>
+<li><strong>GROUP BY</strong> 始终在 <strong>WHERE</strong> 和 <strong>ORDER BY</strong> 之间。</li>
+<li><strong>ORDER BY</strong> 有点像电子表格软件中的 <strong>SORT</strong>。</li>
+</ul>
+<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><p>根据以下 <strong>SQL</strong> 表格信息回答问题</p>
+<ol>
+<li>哪个<strong>客户</strong>（按照名称）下的订单最早？答案应该包含订单的<strong>客户名称</strong>和<strong>日期</strong>。</li>
+<li>算出每个客户的总销售额（单位是<strong>美元</strong>）。答案应该包括两列：每个公司的订单总销售额（单位是<strong>美元</strong>）以及公司<strong>名称</strong>。</li>
+<li>最近的 <strong>web_event</strong> 是通过哪个<strong>渠道</strong>发生的，与此 <strong>web_event</strong> 相关的<strong>客户</strong>是哪个？你的查询应该仅返回三个值：<strong>日期</strong>、<strong>渠道</strong>和<strong>客户名称</strong>。</li>
+<li>算出 <strong>web_events</strong> 中每种<strong>渠道</strong>的次数。最终表格应该有两列：<strong>渠道</strong>和渠道的使用次数。</li>
+<li>与最早的 <strong>web_event</strong> 相关的<strong>主要联系人</strong>是谁？</li>
+<li>每个<strong>客户</strong>所下的最小订单是什么（以<strong>总金额（美元）</strong>为准）。答案只需两列：客户<strong>名称</strong>和<strong>总金额（美元）</strong>。从最小金额到最大金额排序。</li>
+<li>算出每个区域的<strong>销售代表</strong>人数。最早表格应该包含两列：<strong>区域</strong>和 <strong>sales_reps</strong> 数量。从最少到最多的代表人数排序。</li>
+</ol>
+<h3 id="解决方案：使用GROUP-BY"><a href="#解决方案：使用GROUP-BY" class="headerlink" title="解决方案：使用GROUP BY"></a>解决方案：使用GROUP BY</h3><p>1.哪个<strong>客户</strong>（按照名称）下的订单最早？答案应该包含订单的<strong>客户名称</strong>和<strong>日期</strong>。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.name, o.occurred_at</span><br><span class="line"><span class="keyword">FROM</span> accounts a</span><br><span class="line"><span class="keyword">JOIN</span> orders o</span><br><span class="line"><span class="keyword">ON</span> a.id = o.account_id</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> occurred_at</span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name	occurred_at</span><br><span class="line">DISH Network	2013-12-04T04:22:44.000Z</span><br></pre></td></tr></table></figure>
+<p>2.算出每个客户的总销售额（单位是<strong>美元</strong>）。答案应该包括两列：每个公司的订单总销售额（单位是<strong>美元</strong>）以及公司<strong>名称</strong>。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.name, <span class="keyword">SUM</span>(total_amt_usd) total_sales</span><br><span class="line"><span class="keyword">FROM</span> orders o</span><br><span class="line"><span class="keyword">JOIN</span> accounts a</span><br><span class="line"><span class="keyword">ON</span> a.id = o.account_id</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> a.name;</span><br></pre></td></tr></table></figure>
+<p>3.最近的 <strong>web_event</strong> 是通过哪个<strong>渠道</strong>发生的，与此 <strong>web_event</strong> 相关的<strong>客户</strong>是哪个？你的查询应该仅返回三个值：<strong>日期</strong>、<strong>渠道</strong>和<strong>客户名称</strong>。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> w.occurred_at, w.channel, a.name</span><br><span class="line"><span class="keyword">FROM</span> web_events w</span><br><span class="line"><span class="keyword">JOIN</span> accounts a</span><br><span class="line"><span class="keyword">ON</span> w.account_id = a.id </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> w.occurred_at <span class="keyword">DESC</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>4.算出 <strong>web_events</strong> 中每种<strong>渠道</strong>的次数。最终表格应该有两列：<strong>渠道</strong>和渠道的使用次数。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> w.channel, <span class="keyword">COUNT</span>(*)</span><br><span class="line"><span class="keyword">FROM</span> web_events w</span><br><span class="line"><span class="keyword">JOIN</span> accounts a</span><br><span class="line"><span class="keyword">ON</span> a.id = w.account_id</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> w.channel</span><br></pre></td></tr></table></figure>
+<p>5.与最早的 <strong>web_event</strong> 相关的<strong>主要联系人</strong>是谁？ </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.primary_poc</span><br><span class="line"><span class="keyword">FROM</span> web_events w</span><br><span class="line"><span class="keyword">JOIN</span> accounts a</span><br><span class="line"><span class="keyword">ON</span> a.id = w.account_id</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> w.occurred_at</span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>6.每个<strong>客户</strong>所下的最小订单是什么（以<strong>总金额（美元）</strong>为准）。答案只需两列：客户<strong>名称</strong>和<strong>总金额（美元）</strong>。从最小金额到最大金额排序。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.name, <span class="keyword">MIN</span>(total_amt_usd) smallest_order</span><br><span class="line"><span class="keyword">FROM</span> accounts a</span><br><span class="line"><span class="keyword">JOIN</span> orders o</span><br><span class="line"><span class="keyword">ON</span> a.id = o.account_id</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> a.name</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> smallest_order;</span><br></pre></td></tr></table></figure>
+<p>奇怪的是，很多订单没有美元金额。我们可能需要检查下这些订单。 </p>
+<p>7.算出每个区域的<strong>销售代表</strong>人数。最终表格应该包含两列：<strong>区域</strong>和 <strong>sales_reps</strong> 数量。从最少到最多的代表人数排序。 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> r.name, <span class="keyword">COUNT</span>(*) num_reps</span><br><span class="line"><span class="keyword">FROM</span> region r</span><br><span class="line"><span class="keyword">JOIN</span> sales_reps s</span><br><span class="line"><span class="keyword">ON</span> r.id = s.region_id</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> r.name</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> num_reps;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/25/5_group by的用法以及实际工作场景/" data-id="cjjzzrblj0003bsjhfleh37mk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/25/1_NULL和聚合的用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/17/Python 中的关系数据库/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/25/抓取淘宝店铺指标信息项目/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/4_MIN和MAX的用法和案例/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/3_count和null 的使用/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/2_聚合函数count的使用/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/1_NULL和聚合的用法/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
