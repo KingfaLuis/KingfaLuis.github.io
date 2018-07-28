@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="python多线程12threading #线程processing #进程 同一个时间段内做多个程序，大大节省时间。 创建，添加多线程 123import threadingdef main(): join功能 join是什么类型？ 怎么用？ 12345678910111213141516171819202122232425import threadingimport timedef threa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/07/28/python多线程/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="python多线程12threading #线程processing #进程 同一个时间段内做多个程序，大大节省时间。 创建，添加多线程 123import threadingdef main(): join功能 join是什么类型？ 怎么用？ 12345678910111213141516171819202122232425import threadingimport timedef threa">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-28T10:21:01.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="python多线程12threading #线程processing #进程 同一个时间段内做多个程序，大大节省时间。 创建，添加多线程 123import threadingdef main(): join功能 join是什么类型？ 怎么用？ 12345678910111213141516171819202122232425import threadingimport timedef threa">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python多线程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/28/python多线程/" class="article-date">
+  <time datetime="2018-07-28T10:23:08.980Z" itemprop="datePublished">2018-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="python多线程"><a href="#python多线程" class="headerlink" title="python多线程"></a>python多线程</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">threading <span class="comment">#线程</span></span><br><span class="line">processing <span class="comment">#进程</span></span><br></pre></td></tr></table></figure>
+<p>同一个时间段内做多个程序，大大节省时间。</p>
+<p>创建，添加多线程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br></pre></td></tr></table></figure>
+<p>join功能</p>
+<h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><p>是什么类型？</p>
+<p>怎么用？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">thread_job</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># print("This is an added Thread")</span></span><br><span class="line">    print(<span class="string">"T1 start\n"</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br><span class="line">        print(<span class="string">"T1 finish\n"</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">T2_job</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'T2 start\n'</span>)</span><br><span class="line">    print(<span class="string">'T2 finish\n'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># thread_job()</span></span><br><span class="line">    added_thread = threading.Thread(target = thread_job(),name = <span class="string">'T1'</span>)</span><br><span class="line">    thread2 = threading.Thread(target=T2_job(),name = <span class="string">'T2'</span>)</span><br><span class="line">    added_thread.start()</span><br><span class="line">    added_thread.join()</span><br><span class="line">    print(<span class="string">'all done\n'</span>)</span><br><span class="line">    <span class="comment"># print(threading.active_count())</span></span><br><span class="line">    <span class="comment"># print(threading.enumerate())</span></span><br><span class="line">    <span class="comment"># print(threading._format_exc())</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="多线程queue"><a href="#多线程queue" class="headerlink" title="多线程queue"></a>多线程queue</h2><p>经验：多线程是没有返回值，所以要把结果放在一个队列当中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> Queue</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">job</span><span class="params">(l,q)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range (len(l)):</span><br><span class="line">        l[i] = l[i]**<span class="number">2</span></span><br><span class="line">    q.put(l)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multithreading</span><span class="params">()</span>:</span></span><br><span class="line">    q =Queue()</span><br><span class="line">    threads = []</span><br><span class="line">    data = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>],[<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>]]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        t = threading.Thread(target=job,args=(data[i],q)) <span class="comment"># 参数是如何传递的</span></span><br><span class="line">        t.start()</span><br><span class="line">        threads.append(t)</span><br><span class="line">    <span class="keyword">for</span> thread <span class="keyword">in</span> threads:</span><br><span class="line">        thread.join()  <span class="comment"># </span></span><br><span class="line">    results = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        results.append(q.get())</span><br><span class="line">    print(results)</span><br><span class="line"></span><br><span class="line"><span class="comment"># if __name__-== '__main__': #多了一个下划线</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    multithreading()</span><br></pre></td></tr></table></figure>
+<p>输出结果正确</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/28/python多线程/" data-id="cjk59pzhm0003wcjh3omun0tz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/27/股票个股信息爬虫源代码/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/28/python多线程/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/27/股票个股信息爬虫源代码/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/淘宝爬虫项目源代码/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/抓取淘宝店铺指标信息项目/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/25/4_MIN和MAX的用法和案例/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
